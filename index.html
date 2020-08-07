@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <title>Jeopardy!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="board-cont" class="board-container">
+        <div class="board">
+            <div class="title"><h1 cattitle>Category</h1></div>
+            <div class="title"><h1 cattitle>Category</h1></div>
+            <div class="title"><h1 cattitle>Category</h1></div>
+            <div class="title"><h1 cattitle>Category</h1></div>
+            <div class="title"><h1 cattitle>Category</h1></div>
+            <div class="title"><h1 cattitle>Category</h1></div>
+            <div class="answer"><button btncol1 class="btn-board">$200</button></div>
+            <div class="answer"><button btncol2 class="btn-board">$200</button></div>
+            <div class="answer"><button btncol3 class="btn-board">$200</button></div>
+            <div class="answer"><button btncol4 class="btn-board">$200</button></div>
+            <div class="answer"><button btncol5 class="btn-board">$200</button></div>
+            <div class="answer"><button btncol6 class="btn-board">$200</button></div>
+            <div class="answer"><button btncol1 class="btn-board">$400</button></div>
+            <div class="answer"><button btncol2 class="btn-board">$400</button></div>
+            <div class="answer"><button btncol3 class="btn-board">$400</button></div>
+            <div class="answer"><button btncol4 class="btn-board">$400</button></div>
+            <div class="answer"><button btncol5 class="btn-board">$400</button></div>
+            <div class="answer"><button btncol6 class="btn-board">$400</button></div>
+            <div class="answer"><button btncol1 class="btn-board">$600</button></div>
+            <div class="answer"><button btncol2 class="btn-board">$600</button></div>
+            <div class="answer"><button btncol3 class="btn-board">$600</button></div>
+            <div class="answer"><button btncol4 class="btn-board">$600</button></div>
+            <div class="answer"><button btncol5 class="btn-board">$600</button></div>
+            <div class="answer"><button btncol6 class="btn-board">$600</button></div>
+            <div class="answer"><button btncol1 class="btn-board">$800</button></div>
+            <div class="answer"><button btncol2 class="btn-board">$800</button></div>
+            <div class="answer"><button btncol3 class="btn-board">$800</button></div>
+            <div class="answer"><button btncol4 class="btn-board">$800</button></div>
+            <div class="answer"><button btncol5 class="btn-board">$800</button></div>
+            <div class="answer"><button btncol6 class="btn-board">$800</button></div>
+            <div class="answer"><button btncol1 class="btn-board">$1000</button></div>
+            <div class="answer"><button btncol2 class="btn-board">$1000</button></div>
+            <div class="answer"><button btncol3 class="btn-board">$1000</button></div>
+            <div class="answer"><button btncol4 class="btn-board">$1000</button></div>
+            <div class="answer"><button btncol5 class="btn-board">$1000</button></div>
+            <div class="answer"><button btncol6 class="btn-board">$1000</button></div>
+        </div>
+        <div class="information">
+            <div class="current-answer"><h2 id="currentanswer"></h2></div> 
+            <!-- <h2>Wake up & identify this man often described as "sleepy-eyed"</h2> -->
+            <div class="buttons-container"><button id="btnreval" class="btn-reval">Reval Answer</button><button id="btnright" class="btn-right">Right</button><button id="btnwrong" class="btn-wrong">Wrong</button></div>
+            <div class="money-container">
+                <div class="money-count-container"><div class="money-count"><h1 id="moneycount">$0</h1></div></div>
+                <div class="name-container"><div class="name"><canvas id="signature-pad-board" class="signature-pad" width="496" height="300"></canvas></div></div>
+                <!-- <div class="name-container"><div class="name"><h1>CHRIS</h1></div></div> -->
+            </div>
+        </div>
+    </div>
+    <div id="form-cont" class="form-container">
+        <div class="form-range">
+            <h1>Category Range:</h1>
+            <select class="ranges" name="decades" id="decades">
+                <option value="1980">1980</option>
+                <option value="1990">1990</option>
+                <option value="2000">2000</option>
+                <option value="2010">2010</option>
+            </select>
+              <h1>TO END OF DECADE</h1>
+            <select class="ranges" name="todecades" id="todecades">
+                <option value="1980">1980</option>
+                <option value="1990">1990</option>
+                <option value="2000">2000</option>
+                <option value="2010">2010</option>
+            </select>
+        </div>
+        <div class="sig-container">
+            <div class="pad-container">
+                <canvas id="signature-pad" class="signature-pad" width="496" height="247"></canvas>
+            </div>
+            <div class="submit-container">
+                <h1 id="loading">Write Signiture Then Submit</h1>
+                <button class="btn-submit" onclick="changeScene()">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
